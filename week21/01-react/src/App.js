@@ -3,11 +3,9 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-// Регистрируем необходимые компоненты Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend, Title, ChartDataLabels);
 
 function App() {
-  // Данные для графика
   const data = {
     labels: ['Work', 'Eat', 'Commute', 'Watch TV', 'Sleep'],
     datasets: [
@@ -44,26 +42,26 @@ function App() {
   const options = {
     plugins: {
       legend: {
-        display: true, // Включаем отображение легенды
-        position: 'bottom', //
+        display: true,
+        position: 'bottom',
         labels: {
-          boxWidth: 30, // Ширина цветных блоков в легенде
-          padding: 15, // Отступы между элементами
+          boxWidth: 30,
+          padding: 15,
           font: {
-            size: 15, // Размер шрифта в легенде
-            weight: 'bold', // Жирный шрифт
-            family: 'Arial', // Шрифт
+            size: 15,
+            weight: 'bold',
+            family: 'Arial',
           },
         },
       },
       datalabels: {
         display: true,
-        color: 'white', // Цвет текста
+        color: 'white',
         font: {
-          weight: 'bold', // Жирный шрифт
-          size: 18, // Размер шрифта
+          weight: 'bold',
+          size: 18,
         },
-        formatter: (value) => `${value}%`, // Формат отображаемого текста
+        formatter: (value) => `${value}%`,
       },
     },
   };
