@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+:root {
+  --color-light: #ffffff;
+
+  --color-dark-10: #1a1a1a;
+
+  --color-grey: #5c5555;
+  --color-dark-blue: #262543;
+
+  --color-pinck: #b81685;
+  --color-violet: #a40eb1;
+  --color-red: #d82342;
+  --color-orange: #ff5202;
+
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-violet) 64%,
+    var(--color-red) 136%
+  );
+
+  --border: #{rem(1)} solid var(--color-dark-10);
+
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-accent: 'Kumbh Sans', sans-serif;
+
+  --transition-duration: 0.2s;
+}

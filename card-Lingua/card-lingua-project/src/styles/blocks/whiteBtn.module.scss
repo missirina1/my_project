@@ -1,0 +1,20 @@
+@use '../helpers/' as *;
+.btnWhite {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-light);
+  border: var(--border);
+  color: var(--color-dark-10);
+  border-radius: rem(10);
+  padding: rem(12);
+  white-space: nowrap;
+  align-items: center;
+  min-width: rem(110);
+
+  &:hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-light);
+
+    transition: var(--transition-duration);
+  }
+}

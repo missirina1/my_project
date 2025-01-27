@@ -1,0 +1,36 @@
+@use '../helpers/' as *;
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 10%;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: var(--border);
+  padding: rem(10);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    @include fluid-text(16, 14);
+
+    &_word {
+      margin: 0;
+
+      font-weight: 600;
+    }
+
+    &_translate {
+      font-style: italic;
+    }
+  }
+
+  &__delete {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+  }
+  svg {
+    cursor: pointer;
+  }
+}

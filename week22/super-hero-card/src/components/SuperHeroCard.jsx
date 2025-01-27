@@ -1,3 +1,4 @@
+import Button from './Button';
 function SuperHeroCard(props) {
   const { name, universe, alterego, occupation, friends, superpowers, url } =
     props;
@@ -22,6 +23,8 @@ function SuperHeroCard(props) {
       </div>
 
       <img src={url} alt={name} className="super-hero-card__image" />
+
+      <Button />
     </div>
   );
 }

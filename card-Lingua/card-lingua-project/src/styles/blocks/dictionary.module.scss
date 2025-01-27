@@ -1,0 +1,11 @@
+@use '../helpers/' as *;
+
+.dictionary {
+  padding: 5rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

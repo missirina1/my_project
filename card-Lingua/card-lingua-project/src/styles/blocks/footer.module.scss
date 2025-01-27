@@ -1,0 +1,78 @@
+@use '../helpers/' as *;
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background: var(--color-dark-blue);
+  color: var(--color-light);
+  text-align: center;
+  padding: rem(20);
+  width: 100%;
+  margin-top: auto;
+
+  &__logo {
+    height: auto;
+    max-width: fluid(100, 50);
+    border: rem(10) solid;
+    border-color: var(--gradient);
+    border-radius: rem(10);
+  }
+
+  &__advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: rem(20);
+
+    &_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+    &_img {
+      width: rem(50);
+      margin-bottom: rem(10);
+    }
+    &_text {
+      padding: 0;
+
+      @include fluid-text(16, 14);
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-weight: 300;
+
+    @include fluid-text(20, 14);
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: rem(10) 0;
+
+    svg {
+      background-color: var(--color-light);
+      border-radius: 50%;
+    }
+
+    svg:hover {
+      transform: scale(1.1);
+      transition: var(--transition-duration);
+    }
+  }
+}

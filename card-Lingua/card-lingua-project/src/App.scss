@@ -1,0 +1,14 @@
+@use './styles/normalize';
+@use './styles/globals';
+@use './styles/variables';
+@use './styles/utilis';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Сделаем основной контейнер высотой 100% */
+}
+
+main {
+  flex: 1; /* Это заставит main занимать оставшееся пространство */
+}

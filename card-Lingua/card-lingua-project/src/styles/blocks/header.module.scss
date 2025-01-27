@@ -1,0 +1,42 @@
+@use '../helpers/' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gradient);
+  color: var(--color-dark-10);
+  width: 100vw;
+  padding: rem(15) rem(30);
+
+  &__logo {
+    max-width: fluid(90, 50);
+    margin-right: rem(15);
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+
+    a {
+      background: var(--color-light);
+      border: var(--border);
+      border-radius: rem(5);
+      padding: rem(8) rem(10);
+      font-weight: 450;
+
+      @include fluid-text(18, 14);
+
+      &:hover {
+        background: var(--gradient);
+        color: var(--color-light);
+        transition: var(--transition-duration);
+      }
+    }
+  }
+}
