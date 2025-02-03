@@ -16,15 +16,17 @@
 
     &_title {
       color: var(--color-dark-10);
-      @include fluid-text(44, 34);
+      font-family: 'NunitoSanas-Bold';
+      line-height: 1.2;
+
+      @include fluid-text(64, 44);
     }
 
     &_text {
-      font-weight: 300;
       border-left: var(--border);
       padding-left: 0.5rem;
-
-      @include fluid-text(18, 16);
+      font-family: 'NunitoSanas-Light';
+      @include fluid-text(25, 20);
     }
   }
 

@@ -14,10 +14,12 @@ function Preview() {
             <OrangeBtn
               className={styles.preview__groupBtn_btn}
               text={'Перейти к карточкам'}
+              ariaLabel={'Перейти к карточкам'}
             />
             <WhiteBtn
               className={styles.preview__groupBtn_btn}
               text={'Как улучшить изучаемость?'}
+              ariaLabel={'Как улучшить изучакемость'}
             />
           </div>
         </div>

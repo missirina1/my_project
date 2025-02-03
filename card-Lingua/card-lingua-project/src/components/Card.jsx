@@ -12,8 +12,8 @@ function Card() {
         </div>
 
         <div className={styles.card__footer}>
-          <WhiteBtn text={'Не знаю'} />
-          <OrangeBtn text={'Знаю'} />
+          <WhiteBtn text={'Не знаю'} ariaLabel={'Не знаю слово'} />
+          <OrangeBtn text={'Знаю'} ariaLabel={'Знаю слово'} />
         </div>
       </div>
     </>

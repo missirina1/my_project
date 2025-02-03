@@ -7,15 +7,17 @@
   background: var(--gradient);
   color: var(--color-dark-10);
   width: 100vw;
-  padding: rem(15) rem(30);
+  padding: rem(11) rem(30);
+  font-family: 'NunitoSanas-Bold';
+  letter-spacing: rem(0.5);
 
   &__logo {
-    max-width: fluid(90, 50);
     margin-right: rem(15);
   }
 
   &__menu {
     display: flex;
+    margin-right: 1rem;
   }
 
   &__list {

@@ -1,0 +1,13 @@
+:root {
+  --color-blue-bg: rgba(0, 0, 255, 0.4);
+  --color-blue-promo: rgba(0, 0, 255, 0.777);
+
+  --color-green-bg: rgba(0, 255, 42, 0.4);
+  --color-green-promo: rgba(0, 255, 81, 0.777);
+
+  --color-red-bg: rgba(255, 0, 0, 0.4);
+  --color-red-promo: rgba(255, 0, 0, 0.777);
+
+  --color-black-bg: rgba(0, 0, 0, 0.4);
+  --color-black-promo: rgba(34, 34, 34, 0.777);
+}

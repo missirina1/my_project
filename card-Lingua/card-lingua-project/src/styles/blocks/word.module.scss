@@ -25,12 +25,47 @@
     }
   }
 
-  &__delete {
+  &__change {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: end;
-  }
-  svg {
+    column-gap: 0.5rem;
+    justify-items: center;
     cursor: pointer;
+
+    &_edit {
+      width: rem(30);
+      height: rem(30);
+      padding: rem(5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: rem(5);
+      color: white;
+      background-color: var(--color-dark-blue);
+
+      &:hover {
+        transform: scale(1.1);
+        transition: var(--transition-duration);
+      }
+    }
+
+    &_delete {
+      width: rem(30);
+      height: rem(30);
+      padding: rem(5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: rem(5);
+      color: white;
+      background-color: var(--color-red);
+
+      &:hover {
+        transform: scale(1.1);
+        transition: var(--transition-duration);
+      }
+    }
   }
 }

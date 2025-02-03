@@ -1,18 +1,22 @@
 import stylesOrange from '../styles/blocks/orangeBtn.module.scss';
+import clsx from 'clsx';
 
 function OrangeBtn(props) {
-  const { text } = props;
+  const { text, ariaLabel, className, disabled } = props;
+
   return (
     <>
-      <a
-        href="/"
-        aria-label="Старт изучения"
-        target="_blank"
-        className={stylesOrange.btnOrange}
-        role="button"
+      <button
+        disabled={disabled}
+        aria-label={ariaLabel}
+        className={clsx(
+          stylesOrange.btnOrange,
+          { [stylesOrange.disabled]: disabled },
+          className
+        )}
       >
         {text}
-      </a>
+      </button>
     </>
   );
 }

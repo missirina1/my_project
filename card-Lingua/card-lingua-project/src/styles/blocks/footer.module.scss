@@ -65,12 +65,11 @@
     gap: 1rem;
     padding: rem(10) 0;
 
-    svg {
-      background-color: var(--color-light);
-      border-radius: 50%;
+    a {
+      cursor: pointer;
     }
 
-    svg:hover {
+    a:hover {
       transform: scale(1.1);
       transition: var(--transition-duration);
     }

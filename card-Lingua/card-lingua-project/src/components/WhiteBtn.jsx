@@ -1,18 +1,15 @@
 import stylesWhite from '../styles/blocks/whiteBtn.module.scss';
-
+import clsx from 'clsx';
 function WhiteBtn(props) {
-  const { text } = props;
+  const { text, ariaLabel, className } = props;
   return (
     <>
-      <a
-        href="/"
-        aria-label="Про изучение"
-        target="_k"
-        className={stylesWhite.btnWhite}
-        role="button"
+      <button
+        className={clsx(stylesWhite.btnWhite, className)}
+        aria-label={ariaLabel}
       >
         {text}
-      </a>
+      </button>
     </>
   );
 }

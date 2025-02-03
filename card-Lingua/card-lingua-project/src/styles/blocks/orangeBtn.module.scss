@@ -10,9 +10,24 @@
   padding: rem(12);
   white-space: nowrap;
   align-items: center;
-  min-width: rem(110);
+  min-width: rem(200);
+  font-family: 'NunitoSans-Bold';
+  letter-spacing: rem(0.5);
 
   &:hover {
     color: var(--color-light);
+    background-color: transparent;
+    background: var(--gradient);
+
+    transition: var(--transition-duration);
+  }
+}
+
+.disabled {
+  background-color: rgb(131, 129, 129);
+  cursor: not-allowed;
+
+  &:hover {
+    background: rgb(131, 129, 129);
   }
 }
