@@ -1,4 +1,4 @@
-import styles from '../styles/blocks/logo.module.scss';
+import styles from './logo.module.scss';
 function Logo() {
   return (
     <>

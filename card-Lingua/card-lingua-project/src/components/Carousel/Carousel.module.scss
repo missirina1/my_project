@@ -1,0 +1,16 @@
+@use '/src/styles/helpers/' as *;
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin: 0 4rem 4rem 4rem;
+  border: var(--border);
+
+  &__btn {
+    width: rem(100);
+    height: rem(40);
+  }
+}

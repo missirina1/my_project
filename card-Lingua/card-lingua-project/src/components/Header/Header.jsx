@@ -1,5 +1,5 @@
-import style from '../styles/blocks/header.module.scss';
-import Logo from './Logo';
+import style from './header.module.scss';
+import Logo from '../Logo/Logo';
 
 function Header() {
   return (

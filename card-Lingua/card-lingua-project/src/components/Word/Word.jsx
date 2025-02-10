@@ -1,14 +1,17 @@
-import styles from '../styles/blocks/word.module.scss';
-import FormWord from './FormWord';
+import styles from './word.module.scss';
+import FormWord from '../FormWord/FormWord';
 import { useState } from 'react';
 function Word(props) {
-  const { english, russian } = props;
+  const { english, russian, id, onDelete } = props;
   const [isChangeWord, setIsChangeWord] = useState(false);
   const [word, setWord] = useState(english);
   const [translate, setTranslate] = useState(russian);
 
   function handleClick() {
     setIsChangeWord(true);
+  }
+  function deleteWord() {
+    onDelete(id);
   }
 
   function closeModal() {
@@ -59,7 +62,7 @@ function Word(props) {
               </g>
             </svg>
           </button>
-          <button className={styles.item__change_delete}>
+          <button className={styles.item__change_delete} onClick={deleteWord}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"

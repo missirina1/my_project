@@ -1,4 +1,4 @@
-import stylesOrange from '../styles/blocks/orangeBtn.module.scss';
+import stylesOrange from './orangeBtn.module.scss';
 import clsx from 'clsx';
 
 function OrangeBtn(props) {

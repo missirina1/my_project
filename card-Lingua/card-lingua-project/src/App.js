@@ -1,11 +1,12 @@
 // import './App.css';
 import './App.scss';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Card from './components/Card';
-import Preview from './components/Preview';
-import MyDictionaty from './components/MyDictionary';
-import FormWord from './components/FormWord';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Card from './components/Card/Card';
+import Preview from './components/Preview/Preview';
+import MyDictionaty from './components/MyDictionary/MyDictionary';
+// import FormWord from './components/FormWord';
+import Carousel from './components/Carousel/Carousel';
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
       <Header />
       <main>
         <Preview />
-        <Card />
         <MyDictionaty />
+        <Carousel />
       </main>
       <Footer />
     </div>

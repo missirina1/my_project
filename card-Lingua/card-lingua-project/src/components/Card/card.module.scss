@@ -1,11 +1,10 @@
-@use '../helpers/' as *;
+@use '/src/styles/helpers/' as *;
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  row-gap: 0.5rem;
   width: fluid(350, 300);
   height: fluid(400, 300);
   border: rem(2) solid var(--l);
@@ -22,25 +21,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 0.5rem;
+    row-gap: 1.3rem;
 
     &__word {
+      width: rem(250);
+      height: rem(40);
       display: flex;
       justify-content: center;
+      align-items: center;
       background-color: var(--color-light);
       color: var(--color-dark-10);
-      width: rem(200);
       border: var(--border);
       box-shadow: inset 0 3px 5px var(--color-dark-blue);
       font-family: 'NunitoSans-Bold';
-      letter-spacing: rem(0.5);
+      letter-spacing: rem(0.8);
 
       @include fluid-text(28, 20);
     }
 
     &__translate {
       font-family: 'NunitoSans-Regular';
-      letter-spacing: rem(0.5);
+      letter-spacing: rem(0.8);
 
       @include fluid-text(28, 16);
     }
@@ -54,9 +55,9 @@
     }
 
     &__btn {
-      margin-top: 1rem;
-      height: rem(30);
-      width: rem(150);
+      margin-block: 1rem;
+      height: rem(40);
+      width: auto;
     }
   }
 

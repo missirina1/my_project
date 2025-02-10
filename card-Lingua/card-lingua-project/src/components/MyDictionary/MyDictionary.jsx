@@ -1,14 +1,20 @@
-import words from '../data/data.js';
-import Word from './Word';
-import styles from '../styles/blocks/dictionary.module.scss';
-import OrangeBtn from './OrangeBtn.jsx';
+import wordsData from '../data/data';
+import Word from '../Word/Word';
+import styles from './dictionary.module.scss';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import { useState } from 'react';
 function MyDictionary() {
+  const [newWord, setNewWord] = useState('');
+  const [wordTranslate, setWordTranslate] = useState('');
+  const [words, setWords] = useState(wordsData);
+
   function handleFormSubmit(e) {
     e.preventDefault();
   }
-  const [newWord, setNewWord] = useState('');
-  const [wordTranslate, setWordTranslate] = useState('');
+
+  function deleteWord(id) {
+    setWords(words.filter((word) => word.id !== id));
+  }
 
   return (
     <>
@@ -50,6 +56,7 @@ function MyDictionary() {
                   english={english}
                   transcription={transcription}
                   russian={russian}
+                  onDelete={deleteWord}
                 />
               );
             })}

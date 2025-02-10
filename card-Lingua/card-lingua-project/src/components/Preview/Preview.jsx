@@ -1,6 +1,6 @@
-import styles from '../styles/blocks/preview.module.scss';
-import OrangeBtn from './OrangeBtn';
-import WhiteBtn from './WhiteBtn';
+import styles from './preview.module.scss';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import WhiteBtn from '../WhiteBtn/WhiteBtn';
 function Preview() {
   return (
     <>

@@ -1,7 +1,7 @@
-import WhiteBtn from './WhiteBtn';
-import OrangeBtn from './OrangeBtn';
+import WhiteBtn from '../WhiteBtn/WhiteBtn';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import { useState } from 'react';
-import styles from '../styles/blocks//formWord.module.scss';
+import styles from './formWord.module.scss';
 
 function FormWord(props) {
   const { english, translate, onSave, onCancle } = props;

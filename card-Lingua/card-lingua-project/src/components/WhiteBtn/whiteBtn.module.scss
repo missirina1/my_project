@@ -1,11 +1,10 @@
-@use '../helpers/' as *;
-
-.btnOrange {
+@use '/src/styles/helpers/' as *;
+.btnWhite {
   display: flex;
   justify-content: center;
-  background-color: var(--color-orange);
-  color: var(--color-light);
-  border: none;
+  background-color: var(--color-light);
+  border: var(--border);
+  color: var(--color-dark-10);
   border-radius: rem(10);
   padding: rem(12);
   white-space: nowrap;
@@ -20,14 +19,5 @@
     background: var(--gradient);
 
     transition: var(--transition-duration);
-  }
-}
-
-.disabled {
-  background-color: rgb(131, 129, 129);
-  cursor: not-allowed;
-
-  &:hover {
-    background: rgb(131, 129, 129);
   }
 }
