@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Card from './components/Card';
 import Preview from './components/Preview';
 import MyDictionaty from './components/MyDictionary';
+import FormWord from './components/FormWord';
 
 function App() {
   return (

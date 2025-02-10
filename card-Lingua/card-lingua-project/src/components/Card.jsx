@@ -1,20 +1,32 @@
 import styles from '../styles/blocks/card.module.scss';
-import WhiteBtn from './WhiteBtn';
+
 import OrangeBtn from './OrangeBtn';
+import { useState } from 'react';
+
 function Card() {
+  const [isTranslated, setIsTranslated] = useState(false);
+  function handleClick() {
+    setIsTranslated((prev) => !prev);
+  }
   return (
     <>
       <div className={styles.card}>
-        <div>
-          <h2 className={styles.card__word}>Слово</h2>
-          <h3 className={styles.card__translate}>Перевод</h3>
-          <h4 className={styles.card__transcript}>транскрипция</h4>
+        <div className={styles.block}>
+          <h2 className={styles.block__word}>Слово</h2>
+          <h3 className={styles.block__transcript}>транскрипция</h3>
+          <OrangeBtn
+            text={isTranslated ? 'Скрыть перевод' : 'Показать перевод'}
+            onClick={handleClick}
+            className={styles.block__btn}
+            ariaLabel={'Перевод слова'}
+          />
         </div>
-
         <div className={styles.card__footer}>
-          <WhiteBtn text={'Не знаю'} ariaLabel={'Не знаю слово'} />
-          <OrangeBtn text={'Знаю'} ariaLabel={'Знаю слово'} />
+          {isTranslated && (
+            <h3 className={styles.card__translate}>перевод слова</h3>
+          )}
         </div>
+        \
       </div>
     </>
   );

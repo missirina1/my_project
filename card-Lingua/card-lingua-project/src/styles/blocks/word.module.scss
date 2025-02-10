@@ -69,3 +69,37 @@
     }
   }
 }
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); // Затемнение
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: rem(40);
+  border-radius: rem(10);
+  width: rem(350);
+  box-shadow: 0 rem(4) rem(10) rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  top: rem(10);
+  right: rem(10);
+  background: none;
+  border: none;
+  font-size: rem(18);
+  cursor: pointer;
+}
