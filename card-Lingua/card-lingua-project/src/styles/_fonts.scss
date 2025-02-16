@@ -1,29 +1,23 @@
 @font-face {
-  font-family: 'Lemon-Regular';
-  src: url('./fonts/Lemon-Regular.woff2') format('woff2');
+  font-family: 'OpenSans-Regular';
+  src: url('./fonts/OpenSans-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NunitoSans';
-  src: url('./fonts/NunitoSans-Regular.woff2') format('woff2');
+  font-family: 'OpenSans-Light';
+  src: url('./fonts/OpenSans-Light.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NunitoSans';
-  src: url('./fonts/NunitoSans-Light.woff2') format('woff2');
+  font-family: 'OpenSans-Bold';
+  src: url('./fonts/OpenSans-Bold.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NunitoSans';
-  src: url('./fonts/NunitoSans-Italic.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NunitoSans';
-  src: url('./fonts/NunitoSans-Bold.woff2') format('woff2');
+  font-family: 'OpenSans-Italic';
+  src: url('./fonts/OpenSans-Italic.woff2') format('woff2');
   font-display: swap;
 }

@@ -1,5 +1,6 @@
 @use '/src/styles/helpers/' as *;
 
 .logo {
-  max-width: fluid(75, 50);
+  max-width: fluid(60, 50);
+  padding: rem(2);
 }

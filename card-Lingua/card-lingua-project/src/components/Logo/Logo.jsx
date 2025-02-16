@@ -1,14 +1,14 @@
 import styles from './logo.module.scss';
-function Logo() {
+import clsx from 'clsx'; //
+
+function Logo({ className }) {
   return (
-    <>
-      <img
-        src="/assets/images/logo.png"
-        alt="logo"
-        aria-label="logo"
-        className={styles.logo}
-      ></img>
-    </>
+    <img
+      src="/assets/images/logo.png"
+      alt="logo"
+      aria-label="logo"
+      className={clsx(styles.logo, className)}
+    />
   );
 }
 

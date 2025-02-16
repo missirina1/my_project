@@ -18,8 +18,8 @@ function Preview() {
             />
             <WhiteBtn
               className={styles.preview__groupBtn_btn}
-              text={'Как улучшить изучаемость?'}
-              ariaLabel={'Как улучшить изучакемость'}
+              text={'Открыть мой словарь'}
+              ariaLabel={'Открыть мой словарь'}
             />
           </div>
         </div>

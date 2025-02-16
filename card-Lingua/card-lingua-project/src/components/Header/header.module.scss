@@ -7,12 +7,12 @@
   background: var(--gradient);
   color: var(--color-dark-10);
   width: 100vw;
-  padding: rem(11) rem(30);
-  font-family: 'NunitoSanas-Bold';
-  letter-spacing: rem(0.5);
+  padding: rem(5) rem(30);
+  font-family: 'OpenSans-Bold';
 
   &__logo {
     margin-right: rem(15);
+    max-width: fluid(60, 50);
   }
 
   &__menu {
@@ -29,10 +29,9 @@
       background: var(--color-light);
       border: var(--border);
       border-radius: rem(5);
-      padding: rem(8) rem(10);
-      font-weight: 450;
+      padding: rem(3) rem(10);
 
-      @include fluid-text(18, 14);
+      @include fluid-text(16, 14);
 
       &:hover {
         background: var(--gradient);

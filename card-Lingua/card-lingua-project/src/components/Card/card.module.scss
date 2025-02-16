@@ -33,21 +33,21 @@
       color: var(--color-dark-10);
       border: var(--border);
       box-shadow: inset 0 3px 5px var(--color-dark-blue);
-      font-family: 'NunitoSans-Bold';
-      letter-spacing: rem(0.8);
-
-      @include fluid-text(28, 20);
+      font-family: 'OpenSans-Regular';
+      letter-spacing: rem(0.5);
+      @include fluid-text(26, 20);
     }
 
     &__translate {
-      font-family: 'NunitoSans-Regular';
+      font-family: 'OpenSans-Light';
+      font-weight: lighter;
       letter-spacing: rem(0.8);
 
-      @include fluid-text(28, 16);
+      @include fluid-text(20, 16);
     }
 
     &__transcript {
-      font-family: 'NunitoSans-Light';
+      font-family: 'OpenSans-Light';
       font-weight: lighter;
       letter-spacing: rem(1);
 
@@ -55,7 +55,7 @@
     }
 
     &__btn {
-      margin-block: 1rem;
+      margin-block: 1.5rem;
       height: rem(40);
       width: auto;
     }

@@ -20,6 +20,7 @@ function FormWord(props) {
 
   return (
     <form className={styles.form}>
+      <h1 className={styles.form__title}>Изменение слова</h1>
       <input
         type="text"
         className={styles.form__word}

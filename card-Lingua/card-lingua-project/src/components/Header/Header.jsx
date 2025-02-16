@@ -13,9 +13,9 @@ function Header() {
                 className={style.header__link}
                 href="/"
                 target="_blank"
-                aria-label="Перейти на главную"
+                aria-label="Мой словарь"
               >
-                Home
+                Мой словарь
               </a>
             </li>
             <li className={style.header__item}>
@@ -23,9 +23,9 @@ function Header() {
                 className={style.header__link}
                 href="/"
                 target="_blank"
-                aria-label="О нас"
+                aria-label="Карточки слов"
               >
-                About
+                Карточки слов
               </a>
             </li>
             <li className={style.header__item}>
@@ -35,7 +35,7 @@ function Header() {
                 target="blank"
                 aria-label="Контакты "
               >
-                Contact us
+                Контакты
               </a>
             </li>
           </ul>

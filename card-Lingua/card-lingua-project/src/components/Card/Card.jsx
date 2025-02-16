@@ -25,7 +25,7 @@ function Card(props) {
         </div>
         <div className={styles.card__footer}>
           {isTranslated && (
-            <h3 className={styles.card__translate}>{russian}</h3>
+            <h3 className={styles.block__translate}>{russian}</h3>
           )}
         </div>
         <span>

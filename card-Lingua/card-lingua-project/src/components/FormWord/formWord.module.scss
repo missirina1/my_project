@@ -12,6 +12,15 @@
   border-radius: rem(10);
   border: var(--border);
   background: var(--color-dark-blue);
+  font-family: 'OpenSans-Regular';
+
+  &__title {
+    font-family: 'OpenSans-Light';
+    margin-bottom: 1rem;
+    color: var(--color-light);
+
+    @include fluid-text(25, 20);
+  }
 
   &__word,
   &__translate {
@@ -28,5 +37,6 @@
     flex-direction: column;
     row-gap: 1rem;
     margin-top: 1rem;
+    font-size: rem(15);
   }
 }
