@@ -1,7 +1,7 @@
 import styles from './card.module.scss';
 import words from '../data/data';
 
-import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import OrangeBtn from '../UX/OrangeBtn';
 import { useState } from 'react';
 
 function Card(props) {

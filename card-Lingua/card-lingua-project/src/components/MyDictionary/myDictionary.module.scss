@@ -1,7 +1,8 @@
 @use '/src/styles/helpers/' as *;
 
 .dictionary {
-  padding: 5rem;
+  padding: rem(100) 2rem 0 2rem;
+  width: 100%;
 
   &__header {
     display: flex;
@@ -12,6 +13,20 @@
 
   &__title {
     font-family: 'OpenSans-Bold';
+    @include fluid-text(40, 20);
+  }
+
+  &__training {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &_btn {
+      width: auto;
+      height: rem(40);
+    }
   }
 
   &__form {

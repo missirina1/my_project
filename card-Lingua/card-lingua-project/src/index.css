@@ -9,3 +9,6 @@ html {
   font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
+
+/* * {
+  outline: 1px solid red; /* Покажет границы всех элементов */

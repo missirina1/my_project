@@ -1,5 +1,5 @@
 import styles from './word.module.scss';
-import FormWord from '../FormWord/FormWord';
+import FormWord from './FormWord';
 import { useState } from 'react';
 function Word(props) {
   const { english, russian, id, onDelete } = props;

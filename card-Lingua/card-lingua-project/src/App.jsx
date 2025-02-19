@@ -1,23 +1,31 @@
 // import './App.css';
 import './App.scss';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Card from './components/Card/Card';
+import Header from './components/Structure/Header';
+import Footer from './components/Structure/Footer';
+import AppRoutes from './components/Routes/AppRoutes';
 import Preview from './components/Preview/Preview';
-import MyDictionaty from './components/MyDictionary/MyDictionary';
-// import FormWord from './components/FormWord';
-import Carousel from './components/Carousel/Carousel';
+
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <header>
+        {' '}
+        <Header />{' '}
+      </header>
+
       <main>
-        <Preview />
-        <MyDictionaty />
-        <Carousel />
+        <Routes>
+          <Route path="/" element={<Preview />} />
+          <Route path="/*" element={<AppRoutes />} />
+        </Routes>
       </main>
-      <Footer />
+
+      <footer>
+        {' '}
+        <Footer />
+      </footer>
     </div>
   );
 }

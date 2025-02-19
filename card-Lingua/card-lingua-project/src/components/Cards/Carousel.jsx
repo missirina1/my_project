@@ -1,6 +1,6 @@
 import styles from './Carousel.module.scss';
-import Card from '../Card/Card';
-import WhiteBtn from '../WhiteBtn/WhiteBtn';
+import Card from './Card';
+import WhiteBtn from '../UX/WhiteBtn';
 import words from '../data/data';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

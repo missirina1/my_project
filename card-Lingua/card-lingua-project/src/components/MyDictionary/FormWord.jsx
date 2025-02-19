@@ -1,5 +1,5 @@
-import WhiteBtn from '../WhiteBtn/WhiteBtn';
-import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import WhiteBtn from '../UX/WhiteBtn';
+import OrangeBtn from '../UX/OrangeBtn';
 import { useState } from 'react';
 import styles from './formWord.module.scss';
 

@@ -1,42 +1,44 @@
 import style from './header.module.scss';
-import Logo from '../Logo/Logo';
+import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <>
       <header className={style.header}>
-        <Logo className={style.header__logo} />
+        <Link to="/home">
+          <Logo className={style.header__logo} />
+        </Link>
+
         <nav className={style.header__menu} role="navigation">
           <ul className={style.header__list}>
             <li className={style.header__item}>
-              <a
+              <Link
+                to="/home"
                 className={style.header__link}
-                href="/"
-                target="_blank"
+                aria-label="Главная страница"
+              >
+                Главная страница
+              </Link>
+            </li>
+
+            <li className={style.header__item}>
+              <Link
+                to="/myDictionary"
+                className={style.header__link}
                 aria-label="Мой словарь"
               >
                 Мой словарь
-              </a>
+              </Link>
             </li>
             <li className={style.header__item}>
-              <a
+              <Link
+                to="/library"
                 className={style.header__link}
-                href="/"
-                target="_blank"
-                aria-label="Карточки слов"
+                aria-label="Моя библиотека"
               >
-                Карточки слов
-              </a>
-            </li>
-            <li className={style.header__item}>
-              <a
-                className={style.header__link}
-                href="/"
-                target="blank"
-                aria-label="Контакты "
-              >
-                Контакты
-              </a>
+                Моя библиотека
+              </Link>
             </li>
           </ul>
         </nav>

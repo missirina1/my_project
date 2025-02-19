@@ -1,8 +1,9 @@
 import wordsData from '../data/data';
-import Word from '../Word/Word';
-import styles from './dictionary.module.scss';
-import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import Word from './Word';
+import styles from './myDictionary.module.scss';
+import OrangeBtn from '../UX/OrangeBtn';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 function MyDictionary() {
   const [newWord, setNewWord] = useState('');
   const [wordTranslate, setWordTranslate] = useState('');
@@ -20,7 +21,16 @@ function MyDictionary() {
     <>
       <div className={styles.dictionary}>
         <div className={styles.dictionary__header}>
-          <h1 className={styles.dictionary__title}>Мой словарь</h1>
+          <div className={styles.dictionary__training}>
+            <h1 className={styles.dictionary__title}>Мой словарь</h1>
+            <Link to="/carousel">
+              <OrangeBtn
+                text={'Тренировать все слова ►'}
+                ariaLabel={'Тренировать все слова'}
+                className={styles.dictionary__training_btn}
+              />
+            </Link>
+          </div>
           <form className={styles.dictionary__form} onSubmit={handleFormSubmit}>
             <input
               type="text"

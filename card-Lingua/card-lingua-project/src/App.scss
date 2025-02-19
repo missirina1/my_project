@@ -12,4 +12,6 @@
 
 main {
   flex: 1; /* Это заставит main занимать оставшееся пространство */
+  display: flex;
+  justify-content: center;
 }

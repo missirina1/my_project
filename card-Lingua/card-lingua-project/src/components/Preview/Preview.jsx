@@ -1,6 +1,7 @@
 import styles from './preview.module.scss';
-import OrangeBtn from '../OrangeBtn/OrangeBtn';
-import WhiteBtn from '../WhiteBtn/WhiteBtn';
+import OrangeBtn from '../UX/OrangeBtn';
+import WhiteBtn from '../UX/WhiteBtn';
+import { Link } from 'react-router-dom';
 function Preview() {
   return (
     <>
@@ -9,18 +10,24 @@ function Preview() {
           <h1 className={styles.preview__content_title}>
             Изучай английский по карточкам
           </h1>
-          <p className={styles.preview__content_text}> Это быстро и легко </p>
+          <p className={styles.preview__content_text}>
+            Освойте любой изучаемый материал с помощью интерактивных карточек
+          </p>
           <div className={styles.preview__groupBtn}>
-            <OrangeBtn
-              className={styles.preview__groupBtn_btn}
-              text={'Перейти к карточкам'}
-              ariaLabel={'Перейти к карточкам'}
-            />
-            <WhiteBtn
-              className={styles.preview__groupBtn_btn}
-              text={'Открыть мой словарь'}
-              ariaLabel={'Открыть мой словарь'}
-            />
+            <Link to="/library">
+              <OrangeBtn
+                className={styles.preview__groupBtn_btn}
+                text={'Перейти к библиотеке'}
+                ariaLabel={'Перейти к библиотеке'}
+              />
+            </Link>
+            <Link to="/myDictionary">
+              <WhiteBtn
+                className={styles.preview__groupBtn_btn}
+                text={'Открыть мой словарь'}
+                ariaLabel={'Открыть мой словарь'}
+              />
+            </Link>
           </div>
         </div>
         <div className={styles.preview__picture}>
