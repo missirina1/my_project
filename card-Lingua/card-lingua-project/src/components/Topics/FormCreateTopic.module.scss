@@ -1,7 +1,7 @@
 @use '/src/styles/helpers/' as *;
 .topicForm {
   padding: rem(100) 2rem rem(100) 2rem;
-  margin-bottom: rem(50);
+  margin-bottom: rem(100);
   display: grid;
   grid-template-rows: 15% 1fr;
   gap: 0.5rem;

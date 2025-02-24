@@ -2,8 +2,16 @@ import OrangeBtn from '../UX/OrangeBtn';
 import ItemTopics from './ItemTopics';
 import styles from './Library.module.scss';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function Library() {
+  const [modules, setModules] = useState([]);
+
+  useEffect(() => {
+    const storedModules = JSON.parse(localStorage.getItem('modules')) || [];
+    setModules(storedModules);
+  }, []);
+
   return (
     <>
       <div className={styles.library}>
@@ -20,9 +28,9 @@ function Library() {
           </div>
         </div>
         <div className={styles.library__listModules}>
-          <ItemTopics />
-          <ItemTopics />
-          <ItemTopics />
+          {modules.map((module) => (
+            <ItemTopics name={module.name} />
+          ))}
         </div>
       </div>
     </>
