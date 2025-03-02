@@ -4,8 +4,10 @@ import WhiteBtn from '../UX/WhiteBtn';
 import words from '../data/data';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
 
-function Carousel() {
+function Carousel(props) {
+  const { className } = props;
   const [index, setIndex] = useState(1);
   const [direction, setDirection] = useState(1);
 
@@ -20,7 +22,7 @@ function Carousel() {
 
   return (
     <>
-      <div className={styles.slide}>
+      <div className={clsx(styles.slide, className)}>
         <WhiteBtn text={'Назад'} onClick={handleClickBack} />
 
         <div className={styles.cardWrapper}>

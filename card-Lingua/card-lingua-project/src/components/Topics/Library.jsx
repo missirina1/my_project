@@ -29,7 +29,9 @@ function Library() {
         </div>
         <div className={styles.library__listModules}>
           {modules.map((module) => (
-            <ItemTopics name={module.name} />
+            <Link key={module.id} to={`/pageModule/${module.id}`}>
+              <ItemTopics name={module.name} words={module.words} />
+            </Link>
           ))}
         </div>
       </div>

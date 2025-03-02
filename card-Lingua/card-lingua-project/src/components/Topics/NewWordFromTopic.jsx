@@ -1,32 +1,43 @@
 import styles from './NewWordFromTopic.module.scss';
-import { useState } from 'react';
+import WhiteBtn from '../UX/WhiteBtn';
 
 function NewWordFromTopic(props) {
-  const { index } = props;
-  const [newWord, setNewWord] = useState('');
-  const [newTranslate, setNewTranslate] = useState('');
+  const { id, index, word, translation, onChange, onDelete } = props;
 
   return (
     <>
       <div className={styles.newWord}>
-        <span className={styles.newWord__index}>{index}</span>
+        <div className={styles.newWord__header}>
+          <span className={styles.newWord__header_index}>{index}</span>
+          <div className={styles.newWord__header_boxBtn}>
+            <WhiteBtn
+              text={
+                <span role="img" aria-label="Удалить слово">
+                  ❌
+                </span>
+              }
+              className={styles.newWord__header_btn}
+              onClick={(e) => {
+                e.preventDefault();
+                onDelete(id);
+              }}
+            />
+          </div>
+        </div>
+
         <input
           className={styles.newWord__word}
           type="text"
           placeholder="Слово"
-          value={newWord}
-          onChange={(e) => {
-            setNewWord(e.target.value);
-          }}
+          value={word}
+          onChange={(e) => onChange('word', e.target.value)}
         ></input>
         <input
           className={styles.newWord__translate}
           type="text"
           placeholder="Перевод"
-          value={newTranslate}
-          onChange={(e) => {
-            setNewTranslate(e.target.value);
-          }}
+          value={translation}
+          onChange={(e) => onChange('translation', e.target.value)}
         />
       </div>
     </>

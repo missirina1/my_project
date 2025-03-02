@@ -11,8 +11,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        {' '}
-        <Header />{' '}
+        <Header />
       </header>
 
       <main>
@@ -23,7 +22,6 @@ function App() {
       </main>
 
       <footer>
-        {' '}
         <Footer />
       </footer>
     </div>
