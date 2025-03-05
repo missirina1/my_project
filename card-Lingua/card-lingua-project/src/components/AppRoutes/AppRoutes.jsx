@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Library from '../Topics/Library';
+import Library from '../Library/Library';
 import MyDictionary from '../MyDictionary/MyDictionary';
-import NotFoundPage from '../Structure/NotFoundPage';
-import FormCreateTopic from '../Topics/FormCreateTopic';
-import Carousel from '../Cards/Carousel';
-import PageModule from '../Topics/PageModule';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import FormCreateTopic from '../FormCreateTopic/FormCreateTopic';
+import Carousel from '../Carousel/Carousel';
+import PageModule from '../PageModule/PageModule';
 
 import Preview from '../Preview/Preview';
 

@@ -1,7 +1,7 @@
-import wordsData from '../data/data';
-import Word from './Word';
-import styles from './myDictionary.module.scss';
-import OrangeBtn from '../UX/OrangeBtn';
+import wordsData from '../../data/data';
+import Word from '../Word/Word';
+import styles from './MyDictionary.module.scss';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 function MyDictionary() {

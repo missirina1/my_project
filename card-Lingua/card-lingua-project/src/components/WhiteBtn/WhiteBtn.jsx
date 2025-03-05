@@ -1,4 +1,4 @@
-import stylesWhite from './whiteBtn.module.scss';
+import stylesWhite from './WhiteBtn.module.scss';
 import clsx from 'clsx';
 function WhiteBtn(props) {
   const { text, ariaLabel, className, onClick } = props;

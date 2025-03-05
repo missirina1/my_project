@@ -1,5 +1,5 @@
 import styles from './NewWordFromTopic.module.scss';
-import WhiteBtn from '../UX/WhiteBtn';
+import WhiteBtn from '../WhiteBtn/WhiteBtn';
 
 function NewWordFromTopic(props) {
   const { id, index, word, translation, onChange, onDelete } = props;

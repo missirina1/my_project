@@ -6,11 +6,12 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Сделаем основной контейнер высотой 100% */
+  min-height: 100vh;
 }
 
 main {
-  flex: 1; /* Это заставит main занимать оставшееся пространство */
+  flex: 1;
   display: flex;
   justify-content: center;
+  width: 100%;
 }

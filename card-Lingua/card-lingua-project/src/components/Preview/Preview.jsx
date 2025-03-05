@@ -1,6 +1,6 @@
-import styles from './preview.module.scss';
-import OrangeBtn from '../UX/OrangeBtn';
-import WhiteBtn from '../UX/WhiteBtn';
+import styles from './Preview.module.scss';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import WhiteBtn from '../WhiteBtn/WhiteBtn';
 import { Link } from 'react-router-dom';
 function Preview() {
   return (

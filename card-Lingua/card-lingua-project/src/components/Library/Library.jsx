@@ -1,5 +1,5 @@
-import OrangeBtn from '../UX/OrangeBtn';
-import ItemTopics from './ItemTopics';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import ItemTopics from '../ItemTopics/ItemTopics';
 import styles from './Library.module.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';

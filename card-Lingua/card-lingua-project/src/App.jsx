@@ -1,8 +1,9 @@
 // import './App.css';
 import './App.scss';
-import Header from './components/Structure/Header';
-import Footer from './components/Structure/Footer';
-import AppRoutes from './components/Routes/AppRoutes';
+
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import AppRoutes from './components/AppRoutes/AppRoutes';
 import Preview from './components/Preview/Preview';
 
 import { Routes, Route } from 'react-router-dom';

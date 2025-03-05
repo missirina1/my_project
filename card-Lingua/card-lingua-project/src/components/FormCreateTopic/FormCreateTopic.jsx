@@ -1,7 +1,7 @@
-import OrangeBtn from '../UX/OrangeBtn';
-import WhiteBtn from '../UX/WhiteBtn';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
+import WhiteBtn from '../WhiteBtn/WhiteBtn';
 import styles from './FormCreateTopic.module.scss';
-import NewWordFromTopic from './NewWordFromTopic';
+import NewWordFromTopic from '../NewWordFormTopic/NewWordFromTopic';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -68,6 +68,9 @@ function FormCreateTopic() {
 
     navigate('/');
   }
+  const isDisabled =
+    words.length === 0 ||
+    words.every((word) => !word.word?.trim() || !word.translation?.trim());
 
   return (
     <>
@@ -126,6 +129,7 @@ function FormCreateTopic() {
               e.preventDefault();
               handleClick();
             }}
+            disabled={isDisabled}
           />
         </form>
       </div>

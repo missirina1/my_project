@@ -1,10 +1,10 @@
 import styles from './PageModule.module.scss';
-import Carousel from '../Cards/Carousel';
-import OrangeBtn from '../UX/OrangeBtn';
+import Carousel from '../Carousel/Carousel';
+import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import WhiteBtn from '../UX/WhiteBtn';
+import WhiteBtn from '../WhiteBtn/WhiteBtn';
 
 function PageModule() {
   const { moduleId } = useParams();
@@ -13,15 +13,12 @@ function PageModule() {
 
   useEffect(() => {
     const storedModules = JSON.parse(localStorage.getItem('modules')) || [];
-    console.log('Все модули в localStorage:', storedModules);
-    console.log('Ищем модуль с ID:', moduleId);
 
     const module = storedModules.find(
       (mod) => String(mod.id) === String(moduleId)
     );
 
     if (module) {
-      console.log('Модуль найден:', module);
       setModuleData(module);
     } else {
       console.log('Модуль не найден!');
@@ -48,25 +45,30 @@ function PageModule() {
       <div className={styles.pageModule}>
         <div className={styles.pageModule__header}>
           <h1 className={styles.pageModule__header_title}>{moduleData.name}</h1>
-          <Link to={`/formCreateTopic/${moduleId}`}>
-            <OrangeBtn
-              text={'Редактировать'}
+          <div className={styles.pageModule__header_groupBtn}>
+            <Link to={`/formCreateTopic/${moduleId}`}>
+              <OrangeBtn
+                text={'Редактировать'}
+                className={styles.pageModule__header_btn}
+              />
+            </Link>
+            <WhiteBtn
+              text={
+                <span role="img" aria-label="Закрыть">
+                  Удалить модуль ❌
+                </span>
+              }
               className={styles.pageModule__header_btn}
+              onClick={deleteModule}
             />
-          </Link>
-          <WhiteBtn
-            text={
-              <span role="img" aria-label="Закрыть">
-                Удалить модуль ❌
-              </span>
-            }
-            className={styles.pageModule__header_btn}
-            onClick={deleteModule}
-          />
+          </div>
         </div>
-        <Carousel className={styles.pageModule__cards} />
+        <Carousel
+          className={styles.pageModule__cards}
+          wordsModule={moduleData.words}
+        />
         <p className={styles.pageModule__description}>
-          {moduleData.description}
+          Описание: {moduleData.description}
         </p>
       </div>
     </>

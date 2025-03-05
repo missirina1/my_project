@@ -1,5 +1,5 @@
-import styles from './footer.module.scss';
-import Logo from './Logo';
+import styles from './Footer.module.scss';
+import Logo from '../Logo/Logo';
 function Footer() {
   return (
     <>

@@ -1,5 +1,5 @@
-import styles from './logo.module.scss';
-import clsx from 'clsx'; //
+import styles from './Logo.module.scss';
+import clsx from 'clsx';
 
 function Logo({ className }) {
   return (
