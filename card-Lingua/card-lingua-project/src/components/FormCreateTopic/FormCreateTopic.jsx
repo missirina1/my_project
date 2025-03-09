@@ -70,7 +70,7 @@ function FormCreateTopic() {
   }
   const isDisabled =
     words.length === 0 ||
-    words.every((word) => !word.word?.trim() || !word.translation?.trim());
+    words.every((word) => !word.english?.trim() || !word.russian?.trim());
 
   return (
     <>
@@ -105,8 +105,8 @@ function FormCreateTopic() {
                 key={word.id}
                 id={word.id}
                 index={index + 1}
-                word={word.word}
-                translation={word.translation}
+                english={word.english}
+                russian={word.russian}
                 onChange={(key, value) => updateWord(index, key, value)}
                 onDelete={deleteWord}
               />

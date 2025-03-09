@@ -1,7 +1,7 @@
 @use '/src/styles/helpers/' as *;
 
 .slide {
-  margin: 0 2rem rem(50) 2rem;
+  margin: rem(100) 2rem rem(50) 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -12,4 +12,7 @@
     width: rem(100);
     height: rem(40);
   }
+}
+.ident {
+  margin-top: rem(100);
 }

@@ -7,9 +7,12 @@
   justify-content: space-around;
   width: fluid(700, 400);
   height: fluid(500, 400);
-  border: rem(2) solid var(--l);
+  border: rem(2) solid var(--color-dark-blue);
   border-radius: rem(15);
   background-color: var(--color-dark-blue);
+
+  backdrop-filter: blur(100px);
+
   color: var(--color-light);
   padding: 2rem;
   text-align: center;
@@ -34,6 +37,7 @@
       color: var(--color-dark-10);
       border: var(--border);
       box-shadow: inset 0 3px 5px var(--color-dark-blue);
+      backdrop-filter: blur(rem(10));
       font-family: 'OpenSans-Regular';
       letter-spacing: rem(0.5);
       @include fluid-text(26, 20);

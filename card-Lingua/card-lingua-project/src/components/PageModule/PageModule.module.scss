@@ -3,11 +3,10 @@
 .pageModule {
   padding: rem(100) 2rem rem(100) 2rem;
   display: grid;
-  grid-template-rows: 10% 1fr 20%;
+  grid-template-rows: 15% 1fr 20%;
   grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
-  gap: 1rem;
   height: 100%;
   width: 100%;
 
@@ -15,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
     grid-row: 1;
     border-bottom: var(--border);
     width: 100%;
@@ -28,6 +28,7 @@
     &_groupBtn {
       display: flex;
       gap: 2rem;
+      margin-bottom: 0.5rem;
     }
     &_btn {
       width: auto;

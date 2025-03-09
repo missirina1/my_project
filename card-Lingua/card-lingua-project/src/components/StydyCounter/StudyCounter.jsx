@@ -2,11 +2,12 @@ import styles from './StudyCounter.module.scss';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import WhiteBtn from '../WhiteBtn/WhiteBtn';
 import { Link } from 'react-router-dom';
+import clsx from 'clsx';
 function StudyCounter(props) {
-  const { know, noKnow, total, onRestart } = props;
+  const { know, noKnow, total, onRestart, className, isMyDictionary } = props;
   return (
     <>
-      <div className={styles.studyCounter}>
+      <div className={clsx(styles.studyCounter, className)}>
         <h1 className={styles.studyCounter__title}>Ваши успехи</h1>
         <div className={styles.studyCounter__box}>
           <p className={styles.studyCounter__box_know}>Знаю: {know}</p>
@@ -23,9 +24,11 @@ function StudyCounter(props) {
             onClick={onRestart}
           />
 
-          <Link to="/library">
+          <Link to={isMyDictionary ? '/myDictionary' : '/library'}>
             <OrangeBtn
-              text={'Вернуть к модулям'}
+              text={
+                isMyDictionary ? 'Вернуться к словарю' : 'Вернуть к модулям'
+              }
               className={styles.studyCounter__footer_btn}
             />
           </Link>

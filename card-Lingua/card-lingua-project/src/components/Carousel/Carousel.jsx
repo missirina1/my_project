@@ -2,17 +2,40 @@ import styles from './Carousel.module.scss';
 import Card from '../Card/Card';
 import WhiteBtn from '../WhiteBtn/WhiteBtn';
 import StudyCounter from '../StydyCounter/StudyCounter';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
+import { useLocation } from 'react-router-dom';
 
 function Carousel(props) {
-  const { className, wordsModule } = props;
+  const { className, wordsModule: propsWordsModule } = props;
+  const location = useLocation();
+
+  const isMyDictionary = location.state?.from?.trim() === 'myDictionary';
+
+  const stateWordsModule = location.state?.wordsModule || [];
+
+  const wordsModule = propsWordsModule?.length
+    ? propsWordsModule
+    : stateWordsModule;
+
+  console.log('wordsModule:', wordsModule);
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [know, setKnow] = useState(0);
   const [noKnow, setNoKnow] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+
+  useEffect(() => {
+    setIndex(0);
+    setKnow(0);
+    setNoKnow(0);
+    setIsFinished(false);
+  }, [wordsModule]);
+
+  if (!wordsModule.length) {
+    return <p>Нет слов для тренировки</p>;
+  }
 
   const handleClickBack = () => {
     if (index > 0) {
@@ -52,6 +75,8 @@ function Carousel(props) {
         noKnow={noKnow}
         total={wordsModule.length}
         onRestart={restartModule}
+        className={isMyDictionary ? styles.ident : null}
+        isMyDictionary={isMyDictionary}
       />
     );
   }
@@ -73,11 +98,11 @@ function Carousel(props) {
               <Card
                 key={wordsModule[index].id}
                 id={wordsModule[index].id}
-                english={wordsModule[index].word}
+                english={wordsModule[index].english}
                 transcription={
                   wordsModule[index].transcription || '[нет транскрипции]'
                 }
-                russian={wordsModule[index].translation}
+                russian={wordsModule[index].russian}
                 index={index + 1}
                 total={wordsModule.length}
                 onKnow={handleKnow}

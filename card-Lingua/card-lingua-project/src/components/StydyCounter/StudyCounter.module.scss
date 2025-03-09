@@ -9,7 +9,6 @@
   background-color: var(--color-dark-blue);
   color: var(--color-light);
   padding: 2rem;
-  margin-top: rem(20);
   margin-bottom: 2rem;
   text-align: center;
   box-shadow: rem(5) rem(10) rem(15) var(--color-dark-blue);
@@ -43,7 +42,7 @@
     margin-top: 2rem;
 
     &_btn {
-      width: rem(200);
+      width: rem(220);
       height: rem(40);
     }
   }

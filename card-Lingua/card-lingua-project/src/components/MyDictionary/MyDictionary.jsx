@@ -1,13 +1,15 @@
-import wordsData from '../../data/data';
+import wordsData from '../../data/data.js';
 import Word from '../Word/Word';
 import styles from './MyDictionary.module.scss';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 function MyDictionary() {
   const [newWord, setNewWord] = useState('');
   const [wordTranslate, setWordTranslate] = useState('');
   const [words, setWords] = useState(wordsData);
+  const navigate = useNavigate();
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -17,19 +19,28 @@ function MyDictionary() {
     setWords(words.filter((word) => word.id !== id));
   }
 
+  function handleTrainAll() {
+    navigate('/carousel', {
+      state: { wordsModule: words, from:'myDictionary' },
+    });
+    console.log('Navigating to /carousel with state:', {
+      wordsModule: words,
+      from: 'myDictionary',
+    });
+  }
   return (
     <>
       <div className={styles.dictionary}>
         <div className={styles.dictionary__header}>
           <div className={styles.dictionary__training}>
             <h1 className={styles.dictionary__title}>Мой словарь</h1>
-            <Link to="/carousel">
-              <OrangeBtn
-                text={'Тренировать все слова ►'}
-                ariaLabel={'Тренировать все слова'}
-                className={styles.dictionary__training_btn}
-              />
-            </Link>
+
+            <OrangeBtn
+              text={'Тренировать все слова ►'}
+              ariaLabel={'Тренировать все слова'}
+              className={styles.dictionary__training_btn}
+              onClick={handleTrainAll}
+            />
           </div>
           <form className={styles.dictionary__form} onSubmit={handleFormSubmit}>
             <input

@@ -1,7 +1,6 @@
 @use '/src/styles/helpers/' as *;
 .topicForm {
   padding: rem(100) 2rem rem(50) 2rem;
-
   display: grid;
   grid-template-rows: 15% 1fr;
   gap: 0.5rem;
@@ -23,6 +22,9 @@
     gap: 1rem;
     width: 100%;
     background-color: #edeff4;
+    box-shadow: 0 rem(8) rem(32) rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(rem(20));
+    border-radius: rem(10);
     padding: 2rem;
     margin-bottom: 1rem;
     overflow-y: auto;
@@ -32,6 +34,10 @@
       font-family: OpenSans-Regular;
       padding: 0.5rem;
       border: none;
+
+      box-shadow: 0 rem(8) rem(32) rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(rem(20));
+
       @include fluid-text(18, 16);
     }
 
@@ -40,6 +46,8 @@
       font-family: OpenSans-Italic;
       padding: 0.5rem;
       border: none;
+      box-shadow: 0 rem(8) rem(32) rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(rem(20));
 
       @include fluid-text(16, 14);
     }

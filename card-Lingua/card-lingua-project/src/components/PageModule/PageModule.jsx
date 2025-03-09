@@ -65,7 +65,7 @@ function PageModule() {
         </div>
         <Carousel
           className={styles.pageModule__cards}
-          wordsModule={moduleData.words}
+          wordsModule={moduleData?.words || []}
         />
         <p className={styles.pageModule__description}>
           Описание: {moduleData.description}

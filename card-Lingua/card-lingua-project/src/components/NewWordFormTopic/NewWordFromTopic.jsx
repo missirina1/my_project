@@ -2,7 +2,7 @@ import styles from './NewWordFromTopic.module.scss';
 import WhiteBtn from '../WhiteBtn/WhiteBtn';
 
 function NewWordFromTopic(props) {
-  const { id, index, word, translation, onChange, onDelete } = props;
+  const { id, index, english, russian, onChange, onDelete } = props;
 
   return (
     <>
@@ -29,15 +29,15 @@ function NewWordFromTopic(props) {
           className={styles.newWord__word}
           type="text"
           placeholder="Слово"
-          value={word}
-          onChange={(e) => onChange('word', e.target.value)}
+          value={english}
+          onChange={(e) => onChange('english', e.target.value)}
         ></input>
         <input
           className={styles.newWord__translate}
           type="text"
           placeholder="Перевод"
-          value={translation}
-          onChange={(e) => onChange('translation', e.target.value)}
+          value={russian}
+          onChange={(e) => onChange('russian', e.target.value)}
         />
       </div>
     </>
